@@ -1,0 +1,176 @@
+<===PLAY===>
+
+{
+  "name": "play",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "WtKvo",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "video",
+      "name": "Store Command Params"
+    },
+    {
+      "video": "${tempVars(\"video\")}",
+      "key": "YOUR API KEY",
+      "info": "1",
+      "resultNo": "0",
+      "storage": "1",
+      "varName": "name",
+      "name": "YouTube Search"
+    },
+    {
+      "video": "${tempVars(\"video\")}",
+      "key": "YOUR API KEY",
+      "info": "0",
+      "resultNo": "0",
+      "storage": "1",
+      "varName": "url",
+      "name": "YouTube Search"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "${tempVars(\"url\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "title": "Done! Magic will start soon!",
+      "author": "",
+      "color": "FC427B",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.discordapp.net/attachments/460037247035637782/749887388716892230/youtube-music-app-icon-red-white.png?width=473&height=473",
+      "storage": "1",
+      "varName": "playembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "message": "The magic: ${tempVars(\"name\")} ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
+
+
+<===PAUSE===>
+{
+  "name": "pause",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "LGJZM",
+  "actions": [
+    {
+      "action": "1",
+      "name": "Control Audio"
+    },
+    {
+      "title": "Magic has been paused",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.discordapp.net/attachments/460037247035637782/749955473783914516/16427.png?width=473&height=473",
+      "storage": "1",
+      "varName": "pause",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "pause",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
+
+<===RESUME===>
+
+{
+  "name": "resume",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "SxWbs",
+  "actions": [
+    {
+      "action": "2",
+      "name": "Control Audio"
+    },
+    {
+      "title": "Magic has been resumed",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.discordapp.net/attachments/460037247035637782/749955077913182248/img_529968.png?width=472&height=473",
+      "storage": "1",
+      "varName": "resu",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "resu",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
+
+<===STOP===>
+
+{
+  "name": "stop",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ICAMj",
+  "actions": [
+    {
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "action": "0",
+      "name": "Control Audio"
+    },
+    {
+      "name": "Leave Voice Channel"
+    }
+  ]
+}
